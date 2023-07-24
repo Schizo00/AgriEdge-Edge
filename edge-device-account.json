@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "shining-rush-392311",
+  "private_key_id": "779c652d566e12f4ba78a07c180649b0d563d8f9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC3iRQQbXJmBplU\nJGHWziN6bRMWvwNIhxVyBxIdx51HGb+FmC/0Mt0B2cCJmmc6KXQp2WJIKPUSB6NC\nTxrnlvfM7dDC8ygQLsge/XDgQP23RbKVsUOubdDD2DUT6JtRwTgHVEn/AWqU06Lo\nt2ETZR/AZHb43WXIcGgiI+huxb98JJ/hBs3scCQb3AjCzTHGGPIwLGr0aNBKCs0k\nNjrmXo4+4pBTZ5tCBNUug7K11lRsDLnlMOhYyyfbp57RjjUzkHJgB6ErWEloL8Oz\nwpAv6z/TmK2E22Gaco/B55fcwdVnn8d9AkSHxbeexk8Bd1d/kDgN2XlpiA4KGs1E\nHEEU01tBAgMBAAECggEAAoxXbY6gyjxYuCOaLSc8XwiGfZLGMFAEfZ+4rMEBqhlN\ngK9sflrkw9AQEt5Z2mOgHoL2EPOVStG1fqfxAxqkPaGRUVzwEeDIZq+/ol7HTFpe\nIKMZrLa5xuJTWFUAL7omSunCGOreMzXzWtZNoCflBouOivrYnS1nBg79Z5OndTPZ\n8IGoQIyF7jii+Jp0/XZ0g36teXnF7+RrX5aPaJxkjzHjqKdnzLQ27uEe8v59/cRn\nYw774mHNeiBPKw2RjDhkGXjL81qNm8lWaHr3y/qxzvxgtjVrlHxfgRuwH99zQJkf\nAZBFFZEfnflFMLMWiDlSZXghEzlCRSLKREaEkvue3QKBgQDo/mxUnxrJMYlQLiXU\n7uTXh1cZPgIBLuLTFtHLXbcZtebxITShDQ9NXVGfpWXjUbxuUk1IRxZN+Ja7cnJx\nMfKwX8ITbOwzxY7UsJc7rV+lUWK/aP5crg8l2SRXTCu5A2WyDv5L969AC38VJ30T\nN4pLxujXSE1gr9H/MODxsdjV7QKBgQDJqHSDa1wc+WcufYKM8x5yf/wJPyK5iWPI\nEI19S4R/RZeHIQTflsrqSOR4vOV8NphGqSzWeghbNU1XXv62QaOrfDWt9lyfBfta\nxYr0xh4IXql1z0zvwVUXYwXpiro6e1UuQNo4VVJ1fBlYGr/Mk0bnM4sgNqh5PWH9\nQJC3jeAwJQKBgQCxwepEZV66QODSG2MhoWFWThtVVsmQvYSwJ6jHzyfypaUcMolE\nlgImtBuiAT5KwAFS6desXQ/XTOEzAY3ubn0JswUObPuIRCFEg7XeAdgG+KCuCByH\n+QP1jET9lU+GR+E+h9Hbg4xhAGRkb0wtbSJFzeu206K1MW61k0ULIPSdwQKBgQCX\nz3pPSS5iHZuA0znJ1GiyeAkMCPyiQnzcqyFpFsXbbk+Biej6TbHaqB9fiY0VcqA2\nabt4hwvtZfYgdUI5gLavLWXX3aSijsVH83kFhnQrht/58aKQx7HAVmqoAyjpR9m7\nZVUinZDjIxaNTi3f22vAN/xftuYjx4MSPV304RjKBQKBgQCxN0O+TPpmTlKJSctV\nhzHSpIvLdukjrW4twQFjlQLq2dQ+kpDBcJMoSt/Iyb8YuKM76Gt4k5pFVSXWxqUb\nJGV8OZt2+HNztuLq9GaWTed3bn6hgrgOxHEQL5f/+tpN3UMLZ1OgXNy+hTdEvZN4\npld3meeMMr2g2jllWufBBloH9g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "edge-device-account@shining-rush-392311.iam.gserviceaccount.com",
+  "client_id": "113137839640091988784",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/edge-device-account%40shining-rush-392311.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

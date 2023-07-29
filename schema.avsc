@@ -1,0 +1,84 @@
+{
+  "type": "record",
+  "name": "Record",
+  "fields": [
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "fields",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "namespace": "Record",
+          "name": "fields",
+          "fields": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "type",
+              "type": {
+                "type": "record",
+                "namespace": "Record.fields",
+                "name": "type",
+                "fields": [
+                  {
+                    "name": "type",
+                    "type": "string"
+                  },
+                  {
+                    "name": "items",
+                    "type": {
+                      "type": "record",
+                      "namespace": "Record.fields.type",
+                      "name": "items",
+                      "fields": [
+                        {
+                          "name": "type",
+                          "type": "string"
+                        },
+                        {
+                          "name": "name",
+                          "type": "string"
+                        },
+                        {
+                          "name": "fields",
+                          "type": {
+                            "type": "array",
+                            "items": {
+                              "type": "record",
+                              "namespace": "Record.fields.type.items",
+                              "name": "fields",
+                              "fields": [
+                                {
+                                  "name": "name",
+                                  "type": "string"
+                                },
+                                {
+                                  "name": "type",
+                                  "type": "string"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

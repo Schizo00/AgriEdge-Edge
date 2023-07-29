@@ -8,7 +8,7 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = cred_path
 timeout = 5.0
 
 subscriber = pubsub_v1.SubscriberClient()
-subscription_path = 'projects/airy-charge-384205/subscriptions/edge-device-sub'
+subscription_path = 'projects/shining-rush-392311/subscriptions/edge-device-sub'
 
 def callback(message):
     print(f'Received Message: {message}')

@@ -6,6 +6,7 @@ from avro.io import BinaryEncoder, DatumWriter
 import io
 import os
 import json
+import pandas as pd
 
 cred_path = 'edge-device-account.json'
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = cred_path
@@ -27,13 +28,14 @@ topic_id = 'shining-rush-392311'
 #     "severity": 3
 # }
 
-rainfall = 0.0
-evaporation = 0.0
-sunshine = 0.0
-windSpeed9am = 0.0
-humidity3pm = 0.0
-pressure3pm = 0.0
-temp = 0.0
+liveWeatherToday = pd.read_csv('liveWeatherToday.csv')
+rainfall = liveWeatherToday['Rainfall'].iloc[0]
+evaporation = liveWeatherToday['Evaporation'].iloc[0]
+sunshine = liveWeatherToday['Sunshine'].iloc[0]
+windSpeed9am = liveWeatherToday['WindSpeed9am'].iloc[0]
+humidity3pm = liveWeatherToday['Humidity3pm'].iloc[0]
+pressure3pm = liveWeatherToday['Pressure3pm'].iloc[0]
+temp = liveWeatherToday['Temp'].iloc[0]
 
 
 

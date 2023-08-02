@@ -14,7 +14,7 @@ avsc_file = 'schema.avsc'
 publisher = pubsub_v1.PublisherClient(publisher_options = pubsub_v1.types.PublisherOptions(
         enable_message_ordering=True,
     ))
-topic_path = 'projects/shining-rush-392311/topics/edge-device'
+topic_path = 'projects/shining-rush-392311/topics/edge-device-plant'
 topic_id = 'shining-rush-392311'
 
 # data = ""

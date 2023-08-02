@@ -27,26 +27,13 @@ topic_id = 'shining-rush-392311'
 #     "diseaseName": "Leaf Spot",
 #     "severity": 3
 # }
-result_df = pd.read_csv('PlantInfo.csv')
+file_path = 'plantsPerDisease.json'
 
-##result_df["diseaseName"] = result_df["diseaseName"].astype(str)
-##dict_data = result_df.to_dict(orient='records')
-##record = {'plantInfo': dict_data}
-##print(lt_df["diseaseName"].iloc[0].tolist())
+with open(file_path, 'r') as file:
+    loaded_data = json.load(file)
+    
+record = loaded_data
 
-result_df = result_df[:20]
-plant_info_list = []
-for index, row in result_df.iterrows():
-    plant_info = {
-        "id": row["id"],
-        "xCoord": row["xCoord"],
-        "yCoord": row["yCoord"],
-        "diseaseName": row["diseaseName"],
-        "severity": row["severity"]
-    }
-    plant_info_list.append(plant_info)
-
-record = {"plantInfo": plant_info_list}
 
 attributes = str(record)
 attributes.encode('utf-8')

@@ -27,7 +27,7 @@ topic_id = 'shining-rush-392311'
 #     "severity": 3
 # }
 rainfall = 15.6
-sunshine = 10.0
+sunshine = 0.0
 windGustSpeed = 41.747501
 humidity9am = 92.0
 humidity3pm = 84.0

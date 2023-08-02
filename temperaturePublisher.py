@@ -27,13 +27,13 @@ topic_id = 'shining-rush-392311'
 #     "severity": 3
 # }
 
-rainfall = 15.0
-evaporation = 3.0
-sunshine = 10.0
-windSpeed9am = 41.0
-humidity3pm = 84.0
-pressure3pm = 10.0
-temp = 25.0
+rainfall = 0.0
+evaporation = 0.0
+sunshine = 0.0
+windSpeed9am = 0.0
+humidity3pm = 0.0
+pressure3pm = 0.0
+temp = 0.0
 
 
 

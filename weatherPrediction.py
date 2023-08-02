@@ -43,13 +43,34 @@ liveWeatherToday.to_csv('liveWeatherToday.csv', index = False)
 
 # In[ ]:
 
-print('1')
 script_name = "weatherPublisher.py"
 
 # Call the second script using subprocess
 try:
-    completed_process = subprocess.run(["python", script_name], capture_output=True)
+    completed_process1 = subprocess.run(["python", script_name], capture_output=True)
     print(completed_process.stdout)    
 except subprocess.CalledProcessError as e:
     print('error')
+
+
+script_name = "temperaturePublisher.py"
+
+# Call the second script using subprocess
+try:
+    completed_process2 = subprocess.run(["python", script_name], capture_output=True)
+    print(completed_process2.stdout)    
+except subprocess.CalledProcessError as e:
+    print('error')
+
+
+script_name = "rainfallPublisher.py"
+
+# Call the second script using subprocess
+try:
+    completed_process3 = subprocess.run(["python", script_name], capture_output=True)
+    print(completed_process3.stdout)    
+except subprocess.CalledProcessError as e:
+    print('error')
+
+    
 

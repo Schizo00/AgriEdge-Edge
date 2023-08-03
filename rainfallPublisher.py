@@ -49,7 +49,7 @@ record = {
     "Cloud9am": cloud9am,
     "Cloud3pm": cloud3pm,
     "Temp3pm": temp3pm,
-    "RainToday":rainToday
+    "RainToday": float(rainToday)
 }
 
 attributes = str(record)

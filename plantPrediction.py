@@ -17,28 +17,13 @@ import os
 import subprocess
 import json
 import pickle
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
 from PIL import Image
-from sklearn.metrics import classification_report, f1_score , confusion_matrix
-
+from datetime import datetime
 import sys
-print(sys.executable)
-
 # Tensorflow Libraries
 import tensorflow as tf
 from tensorflow import keras
-from keras.layers import Dense, Dropout , BatchNormalization
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras import layers,models,Model
 from keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.layers.experimental import preprocessing
-from tensorflow.keras.callbacks import Callback, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
-from tensorflow.keras import mixed_precision
-tf.keras.mixed_precision.set_global_policy('float16')
-
-
-print(tf.__version__)
 
 
 # In[2]:
@@ -61,7 +46,8 @@ def load_and_preprocess_images(directory_path, image_size=(224,224), batch_size=
     return images
 
 # Usage:
-directory_path = "./test"
+today = datetime.today().strftime("%Y%m%d")
+directory_path = f"./new_test/{today}/"
 images = load_and_preprocess_images(directory_path)
 
 
@@ -70,26 +56,52 @@ images = load_and_preprocess_images(directory_path)
 
 # Set the global policy to float32
 # tf.keras.mixed_precision.set_global_policy('float32')
+model_path = 'converted_model.tflite'
 
-# Directory where the SavedModel is stored
-model_directory = 'my_model_new'  # Replace with the actual directory path
+# Load the TFLite model
+interpreter = tf.lite.Interpreter(model_path=model_path)
+interpreter.allocate_tensors()
 
-# Load the model from the directory
-model = tf.keras.models.load_model(model_directory)
-# predictions = model.predict(images)
+# Get input and output details
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+# Assuming a single input and single output for simplicity
+input_shape = input_details[0]['shape']
+output_shape = output_details[0]['shape']
+
+# Prepare your input data (replace 'input_data' with your input data)
+predictions = []
+probabilities = []
+for i in range(len(images[0])):
+    input_data = np.reshape(images[0][i], (1, 224, 224, 3))  # Your input data in the appropriate format
 
 
-# In[4]:
+    # Set the input tensor to the loaded TFLite model
+    interpreter.set_tensor(input_details[0]['index'], input_data)
 
+    # Run inference
+    interpreter.invoke()
 
-predictions = model.predict(images)
+    # Get the output tensor from the TFLite model
+    output_data = interpreter.get_tensor(output_details[0]['index'])
+    class_probabilities = output_data.max(axis=1)
+    
+    predicted_label_index = np.argmax(output_data)
+    
+    predictions.append(predicted_label_index)
+    probabilities.append(class_probabilities)
 
 
 # In[5]:
 
+output_list = list([item.item() for sublist in probabilities for item in sublist])
 
-class_labels = predictions.argmax(axis=1)
-class_probabilities = predictions.max(axis=1)
+percentage_list = [round(item * 100, 2) for item in output_list]
+
+    
+class_labels = predictions
+class_probabilities = percentage_list
 
 
 # In[6]:
@@ -199,36 +211,19 @@ result_df.to_csv('PlantInfo.csv', index = False)
 script_name = "plantPublisher.py"
 
 try:
-    completed_process = subprocess.run(["python", script_name], capture_output=True)
-    print(completed_process.stdout)    
+    completed_process1 = subprocess.run(["python", script_name], capture_output=True)
+    print(completed_process1.stdout)    
 except subprocess.CalledProcessError as e:
     print('error')
 
 
-# In[14]:
+script_name = "weatherPrediction.py"
+
+try:
+    completed_process2 = subprocess.run(["python", script_name], capture_output=True)
+    print(completed_process2.stdout)    
+except subprocess.CalledProcessError as e:
+    print('error')
 
 
-##plantsPerDisease = {'plantsPerDisease' : [result_df['diseaseName'].value_counts().to_dict()]}
-##
-##
-### In[15]:
-##
-##
-##file_path = 'plantsPerDisease.json'
-##
-##with open(file_path, 'w') as file:
-##    json.dump(plantsPerDisease, file)
-##
-##
-### In[ ]:
-##
-##
-##script_name = "plantSpreadPublisher.py"
-##
-### Call the second script using subprocess
-##try:
-##    completed_process = subprocess.run(["python", script_name], capture_output=True)
-##    print(completed_process.stdout)    
-##except subprocess.CalledProcessError as e:
-##    print('error')
 

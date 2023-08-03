@@ -32,13 +32,13 @@ records_for_today = df[df['Date'].dt.date == today]
 # In[15]:
 
 
-liveWeatherToday = records_for_today[['WindSpeed3pm', 'Temp', 'Humidity3pm', 'Rainfall']]
+#liveWeatherToday = records_for_today[['WindSpeed3pm', 'Temp', 'Humidity3pm', 'Rainfall']]
 
 
 # In[20]:
 
 
-liveWeatherToday.to_csv('liveWeatherToday.csv', index = False)
+records_for_today.to_csv('liveWeatherToday.csv', index = False)
 
 
 # In[ ]:
@@ -48,7 +48,7 @@ script_name = "weatherPublisher.py"
 # Call the second script using subprocess
 try:
     completed_process1 = subprocess.run(["python", script_name], capture_output=True)
-    print(completed_process.stdout)    
+    print(completed_process1.stdout)    
 except subprocess.CalledProcessError as e:
     print('error')
 

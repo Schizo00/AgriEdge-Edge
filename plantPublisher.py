@@ -35,6 +35,7 @@ result_df = pd.read_csv('PlantInfo.csv')
 ##print(lt_df["diseaseName"].iloc[0].tolist())
 
 result_df = result_df[:20]
+print(result_df.head())
 plant_info_list = []
 for index, row in result_df.iterrows():
     plant_info = {

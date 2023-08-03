@@ -1,34 +1,21 @@
 id,diseaseName,severity,xCoord,yCoord
-1,Cedar apple rust,0.5643349,0,1
-2,Bacterial spot,0.21364404,0,2
-3,Healthy,0.37186158,0,3
-4,Cedar apple rust,0.3390084,0,4
-5,Apple scab,0.33875903,1,1
-6,Apple scab,0.23797162,1,2
-7,Early blight,0.17604475,1,3
-8,Common rust,0.6336711,1,4
-9,Common rust,0.95893884,2,1
-10,Common rust,0.49424925,2,2
-11,Early blight,0.7941759,2,3
-12,Early blight,0.8381266,2,4
-13,Early blight,0.23475018,3,1
-14,Early blight,0.81138337,3,2
-15,Early blight,0.687963,3,3
-16,Healthy,0.39152348,3,4
-17,Healthy,0.3876752,4,1
-18,Late blight,0.348651,4,2
-19,Late blight,0.5428782,4,3
-20,Spider mites Two-spotted spider mite,0.3484082,4,4
-21,Early blight,0.37948596,5,1
-22,Target Spot,0.38978925,5,2
-23,Early blight,0.5150308,5,3
-24,Spider mites Two-spotted spider mite,0.2838958,5,4
-25,Healthy,0.14239484,6,1
-26,Tomato mosaic virus,0.2520034,6,2
-27,Healthy,0.45499527,6,3
-28,Tomato Yellow Leaf Curl Virus,0.23306182,6,4
-29,Tomato Yellow Leaf Curl Virus,0.7901139,7,1
-30,Tomato Yellow Leaf Curl Virus,0.4736599,7,2
-31,Spider mites Two-spotted spider mite,0.5132047,7,3
-32,Tomato Yellow Leaf Curl Virus,0.64832413,7,4
-33,Tomato Yellow Leaf Curl Virus,0.9856127,8,1
+1,Early blight,20.25,0,1
+2,Esca (Black Measles),76.0,0,2
+3,Healthy,40.65,0,3
+4,Healthy,94.11,0,4
+5,Healthy,32.21,1,1
+6,Healthy,58.54,1,2
+7,Septoria leaf spot,63.66,1,3
+8,Healthy,92.57,1,4
+9,Healthy,64.54,2,1
+10,Bacterial spot,79.17,2,2
+11,Healthy,46.71,2,3
+12,Haunglongbing (Citrus greening),97.45,2,4
+13,Tomato mosaic virus,87.37,3,1
+14,Haunglongbing (Citrus greening),22.5,3,2
+15,Haunglongbing (Citrus greening),57.52,3,3
+16,Septoria leaf spot,26.49,3,4
+17,Healthy,78.17,4,1
+18,Esca (Black Measles),87.84,4,2
+19,Late blight,80.57,4,3
+20,Late blight,77.34,4,4

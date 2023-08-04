@@ -6,4 +6,4 @@ RUN python3 -m pip install -r requirements.txt
 RUN apt-get update && apt-get -y install cron
 RUN echo "0 15 * * * /plantPrediction.py" >> /etc/crontab
 EXPOSE 3000
-CMD cron -f 
+CMD cron -f && python3 /GUI.py

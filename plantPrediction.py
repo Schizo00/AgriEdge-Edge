@@ -5,24 +5,20 @@
 
 
 import warnings
+
 from sklearn.exceptions import ConvergenceWarning
+
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.simplefilter(action='ignore', category=UserWarning)
 
-import itertools
 import numpy as np
 import pandas as pd
-import os
 import subprocess
-import json
 import pickle
-from PIL import Image
 from datetime import datetime
-import sys
 # Tensorflow Libraries
 import tensorflow as tf
-from tensorflow import keras
 from keras.preprocessing.image import ImageDataGenerator
 
 
@@ -210,20 +206,26 @@ result_df.to_csv('PlantInfo.csv', index = False)
 
 script_name = "plantPublisher.py"
 
-try:
-    completed_process1 = subprocess.run(["python", script_name], capture_output=True)
-    print(completed_process1.stdout)    
-except subprocess.CalledProcessError as e:
-    print('error')
+with open("plantPublisher.py") as f:
+    exec(f.read())
+
+# try:
+#     completed_process1 = subprocess.run(["python", "plantPublisher.py"], capture_output=True, shell=True)
+#     print(completed_process1.stdout)
+# except subprocess.CalledProcessError as e:
+#     print('error')
 
 
 script_name = "weatherPrediction.py"
 
-try:
-    completed_process2 = subprocess.run(["python", script_name], capture_output=True)
-    print(completed_process2.stdout)    
-except subprocess.CalledProcessError as e:
-    print('error')
+with open("weatherPrediction.py") as f:
+    exec(f.read())
+
+# try:
+#     completed_process2 = subprocess.run(["python", "weatherPrediction.py"], capture_output=True, shell=True)
+#     print(completed_process2.stdout)
+# except subprocess.CalledProcessError as e:
+#     print('error')
 
 
 

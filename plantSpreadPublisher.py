@@ -1,12 +1,7 @@
-from google.cloud import pubsub_v1
-import avro.schema as schema
-from google.api_core.exceptions import NotFound
-from google.pubsub_v1.types import Encoding
-from avro.io import BinaryEncoder, DatumWriter
-import io
-import os
 import json
-import pandas as pd
+import os
+
+from google.cloud import pubsub_v1
 
 cred_path = 'edge-device-account.json'
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = cred_path

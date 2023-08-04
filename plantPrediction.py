@@ -204,8 +204,6 @@ result_df.to_csv('PlantInfo.csv', index = False)
 # In[ ]:
 
 
-script_name = "plantPublisher.py"
-
 with open("plantPublisher.py") as f:
     exec(f.read())
 
@@ -216,9 +214,12 @@ with open("plantPublisher.py") as f:
 #     print('error')
 
 
-script_name = "weatherPrediction.py"
 
 with open("weatherPrediction.py") as f:
+    exec(f.read())
+
+
+with open("plantSpreadPublisher.py") as f:
     exec(f.read())
 
 # try:
